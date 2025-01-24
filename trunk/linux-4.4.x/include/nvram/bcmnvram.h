@@ -30,7 +30,7 @@
 #define NVRAM_MTD_OFFSET	0		/* uboot env not shared with nvram */
 #else
 #define NVRAM_MTD_SIZE		0x10000		/* mtdblock1, 64K */
-#define NVRAM_MTD_OFFSET	0x01000		/* uboot env max space 4K, shared with nvram */
+#define NVRAM_MTD_OFFSET	0x01010		/* uboot env max space 4K, shared with nvram, skip 16 bytes for WE410443-TC */
 #endif
 
 #define NVRAM_SPACE		(NVRAM_MTD_SIZE-NVRAM_MTD_OFFSET)
